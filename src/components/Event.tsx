@@ -7,26 +7,22 @@ interface EventItemProps {
 }
 
 const EventItem: React.FC<EventItemProps> = ({ event }) => {
-  const position = calculatePosition(event.start);
-  const height = calculateHeight(event.duration);
-
   return (
     <div
-      key={event.id}
-      id={`event-${event.id}`}
       style={{
         position: "absolute",
-        top: `${position}px`,
-        height: `${height}px`,
+        top: `${calculatePosition(event.start)}px`,
+        height: `${calculateHeight(event.duration)}px`,
         width: "100%",
-        backgroundColor: "#dedede",
-        border: "1px solid #000",
-        padding: "10px",
+        backgroundColor: "lightblue",
+        border: "1px solid black",
         boxSizing: "border-box",
+        padding: "5px",
+        color: "black",
+        textAlign: "center",
       }}
     >
-      <strong>Événement {event.id}</strong>: {event.start} ({event.duration}{" "}
-      min)
+      {event.id} - {event.start}
     </div>
   );
 };
