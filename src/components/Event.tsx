@@ -19,7 +19,7 @@ const EventItem: React.FC<EventItemProps> = ({ event }) => {
         top: `${position}px`,
         height: `${height}px`,
         width: "100%",
-        backgroundColor: "#cceeff",
+        backgroundColor: "#dedede",
         border: "1px solid #000",
         padding: "10px",
         boxSizing: "border-box",

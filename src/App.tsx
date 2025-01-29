@@ -3,9 +3,9 @@ import Calendar from "./Components/Calendar.tsx";
 
 function App() {
   return (
-    <>
+    <main>
       <Calendar />
-    </>
+    </main>
   );
 }
 

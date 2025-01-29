@@ -1,4 +1,4 @@
-const calendarHeight = 2400;
+export const calendarHeight = 2400;
 const startOfDay = 9 * 60;
 const endOfDay = 21 * 60;
 const minutesPerPixel = calendarHeight / (endOfDay - startOfDay);

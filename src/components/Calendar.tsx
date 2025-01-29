@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { fetchEventsData, Event } from "../Api/eventsApi.ts";
+import { calendarHeight } from "../Utils/timeUtils.ts";
 import EventItem from "./Event.tsx";
 
 const Calendar: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
 
-  const calendarHeight = 2400;
-
   useEffect(() => {
-    fetchEventsData().then(setEvents);
+    fetchEventsData().then((data) => {
+      setEvents(data);
+    });
   }, []);
 
   return (
