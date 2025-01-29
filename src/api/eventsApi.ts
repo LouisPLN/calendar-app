@@ -1,8 +1,10 @@
-export type Event = {
+export interface Event {
   id: number;
   start: string;
   duration: number;
-};
+  width?: string;
+  groupId: number;
+}
 
 export const fetchEventsData = async (): Promise<Event[]> => {
   try {
