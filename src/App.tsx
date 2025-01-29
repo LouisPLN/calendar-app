@@ -1,5 +1,5 @@
 import React from "react";
-import Calendar from "./components/Calendar.tsx";
+import Calendar from "./Components/Calendar.tsx";
 
 function App() {
   return <div><Calendar /></div>;
