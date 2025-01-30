@@ -14,15 +14,13 @@ const EventItem: React.FC<EventItemProps> = ({ event }) => {
         top: `${calculatePosition(event.start)}px`,
         height: `${calculateHeight(event.duration)}px`,
         width: "100%",
-        backgroundColor: "lightblue",
-        border: "1px solid black",
-        boxSizing: "border-box",
-        padding: "5px",
-        color: "black",
-        textAlign: "center",
+        backgroundColor: "rgba(164, 38, 44, 0.5)",
+        borderLeft: "8px solid #A4262C",
+        borderRadius: "8px",
+        padding: "10px",
       }}
     >
-      {event.id} - {event.start}
+      Evenement :{event.id} - {event.start}
     </div>
   );
 };

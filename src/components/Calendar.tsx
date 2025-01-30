@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchEventsData, Event } from "../Api/eventsApi.ts";
-import { processEvents, calendarHeight } from "../Utils/timeUtils.ts";
+import { processEvents } from "../Utils/timeUtils.ts";
 import EventItem from "./Event.tsx";
 
 const Calendar: React.FC = () => {
@@ -22,31 +22,13 @@ const Calendar: React.FC = () => {
   }, {} as Record<number, Event[]>);
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        height: `${calendarHeight}px`,
-        border: "2px solid black",
-      }}
-    >
+    <div className="groupedEvents-wrapper">
       {Object.entries(groupedEvents).map(([groupId, group]) => (
-        <div
-          key={groupId}
-          style={{
-            position: "relative",
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
+        <div key={groupId} className="groupedEvents">
           {group.map((event) => (
             <div
               key={event.id}
-              style={{
-                position: "relative",
-                width: "100%",
-              }}
+              className="event-wrapper"
             >
               <EventItem event={event} />
             </div>

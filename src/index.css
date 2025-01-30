@@ -1,5 +1,60 @@
-html, * {
+html,
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.calendar-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.groupedEvents-wrapper {
+  z-index: 9999;
+  position: relative;
+  width: 95%;
+  height: 2400px;
+  padding-top: 100px;
+}
+
+.groupedEvents-wrapper .groupedEvents {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.groupedEvents-wrapper .groupedEvents .event-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.timeline-wrapper {
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.timeline-wrapper .timeline {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  border-bottom: 1px dashed #dedede;
+  font-size: 14px;
+  width: 100%;
+}
+
+.timeline-wrapper .timeline-hour {
+  width: 5%;
+  text-align: center;
+}
+
+.timeline-wrapper .timeline-hour-indicator {
+  z-index: -1;
+  flex-grow: 1;
+  height: 1px;
+  background-color: #505050;
 }
